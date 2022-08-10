@@ -1,0 +1,185 @@
+/* input checkbox */
+.header input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid rgba(124, 92, 250, 0.5);
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header input[type="checkbox"]:checked {
+    background-color: var(--a);
+}
+
+.header input[type="checkbox"]:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.header input[type="checkbox"]:checked::after {
+    display: block;
+    width: 4px;
+    height: 7px;
+    border: solid #fff;
+    border-width: 0px 2px 2px 0px;
+    transform: rotate(45deg);
+}
+
+.header input[type="checkbox"]:hover {
+    box-shadow: 0px 0px 5px rgba(124, 92, 250, 0.5);
+}
+
+/*  */
+
+
+.header {
+    width: 75%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.title h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--txt-clr);
+    margin-bottom: 5px;
+}
+
+.title p {
+    color: var(--txt-clr-2);
+    font-size: 0.7rem;
+}
+
+.filterAndButton {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    cursor: pointer;
+    position: relative;
+}
+
+.filterBtn {
+    color: var(--txt-clr);
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.filter {
+    width: 50%;
+    min-width: 190px;
+    background: var(--back-clr);
+    color: var(--txt-clr);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: none;
+    position: absolute;
+    top: 45px;
+    left: -35px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 0.9rem;
+    z-index: 1;
+}
+
+.filter>div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.filterAndButton button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--a);
+    border: none;
+    padding: 10px 12px;
+    border-radius: 25px;
+    color: var(--k);
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.filterAndButton button:hover {
+    opacity: 0.9;
+}
+
+.filterAndButton button>div {
+    width: 25px;
+    height: 25px;
+    background-color: var(--k);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.filterAndButton button>div svg {
+    transform: scale(0.75);
+}
+
+/* *********************** */
+/* Media query */
+@media screen and (min-width:0px) and (max-width:1000px) {
+    .header {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .filterAndButton {
+        gap: 30px;
+    }
+
+    .filterBtn {
+        gap: 15px;
+    }
+}
+
+@media screen and (min-width:0px) and (max-width:550px) {
+    .header {
+        width: 100%;
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .filterAndButton {
+        gap: 30px;
+    }
+
+    .filterBtn {
+        gap: 15px;
+    }
+
+    .filter {
+        width: 90%;
+        min-width: initial;
+        max-width: 200px;
+        left: 10px;
+        top: 50px;
+    }
+}

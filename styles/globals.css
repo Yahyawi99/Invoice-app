@@ -1,0 +1,63 @@
+:root {
+  --a: #7b5cfa;
+  --aa: #3300ff;
+  --b: #9175ff;
+  --c: #1e2139;
+  --d: #252945;
+  --e: #dfe3fa;
+  --ee: #e0e3f0;
+  --f: #888eb0;
+  --g: #7e88c3;
+  --h: #0c0e16;
+  --i: #ec5757;
+  --j: #9277ff;
+  --k: #f8f8f8;
+  --l: #141625;
+  --m: #494e6e;
+  --n: #7c5dfa;
+  --o: #97979725;
+  --p: #ff8f0025;
+  --q: #33d69f25;
+  --rr: #33d6a017;
+  --r: #33d69f;
+  --ss: #ff910010;
+  --s: #ff8f00;
+  --t: #33d69f15;
+  --u: #f9fafe;
+  --v: #888eb0;
+  --w: #373b53;
+  --x: #777f98;
+  --yy: #bdbdbd52;
+  --y: #bdbdbd;
+  --z: #0c0e16;
+  --white: #ffffff;
+  --halftrans: #00000080;
+  --trans: #00000000;
+  --transgray: #00000017;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+}
+
+/*  shared styles */
+::-webkit-scrollbar {
+  appearance: none;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  appearance: none;
+  background-color: var(--a);
+  border-radius: 0px 0px 10px 10px;
+}

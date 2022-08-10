@@ -1,0 +1,371 @@
+.container {
+  max-width: 650px;
+  max-height: 100vh;
+  background-color: var(--back-clr);
+  position: absolute;
+  left: -150%;
+  top: 0;
+  border-radius: 0px 25px 0px 0px;
+  box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.2);
+  transition: left 1.5s;
+  overflow: hidden;
+  padding: 0px 0px 0px 25px;
+}
+
+/* Show class */
+.show {
+  left: -25px;
+  transition: left 0.5s;
+}
+
+.container input {
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.container input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.title {
+  color: var(--txt-clr);
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+  padding: 50px 25px 0px;
+}
+
+.title span {
+  color: var(--txt-clr-2);
+}
+
+
+/* Form */
+
+.formContainer {
+  height: 100px;
+  min-height: 100vh;
+  padding: 25px 25px 125px 25px;
+  overflow-y: scroll;
+}
+
+.form {
+  margin: 0px 0px 40px 0px;
+}
+
+.form>p {
+  color: var(--aa);
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin: 0px 0px 15px 0px;
+}
+
+.form>div {
+  margin: 0px 0px 15px 0px;
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form .info,
+.form .payment,
+.form .itemInfo {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 25px;
+}
+
+.info>div {
+  width: 30%;
+  min-width: 125px;
+}
+
+.form label {
+  font-size: 0.8rem;
+  color: var(--txt-clr-2);
+  margin: 0px 0px 5px 0px;
+}
+
+.form input,
+.form select {
+  height: 45px;
+  background-color: transparent;
+  color: var(--txt-clr);
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  outline: none;
+  padding: 0px 0px 0px 10px;
+}
+
+.form .payment>div {
+  flex: 1;
+}
+
+.form .itemInfo {
+  gap: 20px;
+}
+
+.itemInfo>div:nth-child(1) {
+  width: 30%;
+}
+
+.itemInfo>div:nth-child(2) {
+  width: 10%;
+}
+
+.itemInfo>div:nth-child(3) {
+  width: 20%;
+}
+
+.itemInfo>div:nth-child(4) {
+  width: 20%;
+}
+
+.itemInfo>div:nth-child(5) {
+  transform: translateY(50%);
+  cursor: pointer;
+}
+
+.itemInfo>div:nth-child(5):hover svg path {
+  transition: 0.25s;
+  fill: var(--red);
+}
+
+.totalContainer input {
+  font-weight: 700;
+  border: none;
+}
+
+.addBtn {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--back-clr-2);
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: inherit;
+  transition: 0.25s;
+}
+
+.addBtn>div {
+  transform: scale(0.75);
+  margin: 2px 0px 0px 0px;
+}
+
+.addBtn:hover {
+  opacity: 0.75;
+}
+
+/* Error msgs */
+.errorMsg {
+  color: var(--red);
+  font-weight: 400;
+}
+
+/* Buttons */
+.btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0px 0px 0px;
+}
+
+.btns button {
+  border-radius: 25px;
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btns>div {
+  display: flex;
+  gap: 15px;
+}
+
+.discardBtn {
+  background-color: var(--back-clr-2);
+  color: var(--a);
+}
+
+.draftBtn {
+  background-color: var(--back-clr-2);
+}
+
+.sendBtn {
+  background-color: var(--a);
+  color: #fff;
+}
+
+.btns button:hover {
+  opacity: 0.8;
+}
+
+/* email input */
+.clientEmailContainer {
+  position: relative;
+}
+
+.clientEmailContainer>span {
+  position: absolute;
+  right: 0px;
+  font-size: 0.8rem;
+  color: var(--red);
+}
+
+/* date input */
+.payment>div:nth-child(1) {
+  position: relative;
+  cursor: pointer;
+}
+
+.payment>div:nth-child(1)>input {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.payment i {
+  position: absolute;
+  right: 5px;
+  top: 27px;
+  fill: var(--x);
+  opacity: 0.75;
+  transform: scale(0.8);
+}
+
+/* Payment terms dropdown */
+.payment>div:nth-child(2) {
+  position: relative;
+}
+
+.payment>div:nth-child(2)>input {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dropDown {
+  list-style: none;
+  background-color: var(--back-clr-4);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 60px;
+  user-select: none;
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 25px 20px;
+  z-index: 1;
+}
+
+.dropDown li {
+  cursor: pointer;
+  color: var(--txt-clr);
+  font-size: 0.9rem;
+}
+
+.payment>div:nth-child(2)>i {
+  position: absolute;
+  top: 33px;
+  right: 8px;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Edit buttons */
+.editBtns {
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.editBtns>button:nth-child(1) {
+  background-color: var(--back-clr-2);
+  color: var(--a);
+}
+
+.editBtns>button:nth-child(2) {
+  background-color: var(--a);
+  color: #fff;
+}
+
+/* *********************** */
+/* Media query */
+@media screen and (min-width:0px) and (max-width:1000px) {
+  .container {
+    width: 100%;
+    max-width: initial;
+    max-height: fit-content;
+    left: 0;
+    top: -200%;
+    border-radius: 0px 0px 0px 0px;
+    transition: top 1s;
+  }
+
+  /* Show class */
+  .show {
+    left: 0;
+    top: 0;
+    transition: top 0.5s;
+  }
+
+  /* Form */
+  .formContainer {
+    height: 100px;
+    min-height: 100vh;
+    padding: 25px 25px 190px 25px;
+  }
+}
+
+@media screen and (min-width:0px) and (max-width:750px) {
+  .container {
+    padding: 0px;
+  }
+
+  /* Form */
+  .formContainer {
+    padding: 25px 0px 190px 10px;
+  }
+
+  .form input {
+    padding: 0px 5px 0px 5px;
+  }
+
+  /* Payment terms */
+  .dropDown {
+    top: 65px;
+  }
+
+  /* Add item  */
+  .form .itemInfo {
+    gap: 10px;
+  }
+
+  /* Buttons */
+  .btns button {
+    font-size: 0.8rem;
+    padding: 15px 10px;
+  }
+
+  .btns>div {
+    gap: 10px;
+  }
+
+  .discardBtn {
+    padding: 15px;
+  }
+
+}

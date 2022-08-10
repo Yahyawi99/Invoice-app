@@ -1,0 +1,109 @@
+.invoice {
+    width: 75%;
+    height: 80px;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    background-color: var(--back-clr);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: border 0.25s;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.1);
+    margin-bottom: 15px;
+    padding: 0px 15px 0px 35px;
+    font-size: 95%;
+}
+
+.invoice:hover {
+    border: 1px solid var(--a);
+}
+
+.invoice>div {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex: 1;
+}
+
+.invoice>div:nth-child(2) {
+    flex: 0.6;
+    gap: 25px;
+}
+
+.id {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: var(--txt-clr);
+}
+
+.id>span {
+    color: var(--txt-clr-2);
+    font-size: 0.8rem;
+}
+
+.paymentTime,
+.clientName {
+    color: var(--txt-clr-3);
+    font-size: 0.9rem;
+}
+
+.price {
+    flex: 1;
+    color: var(--txt-clr);
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.status {
+    flex: 0.9;
+    max-width: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 600;
+    padding: 15px 8px;
+    border-radius: 5px;
+}
+
+.status>svg {
+    width: 8px;
+}
+
+.arrow path {
+    stroke: var(--txt-clr-2);
+}
+
+
+/* *********************** */
+/* Media query */
+@media screen and (min-width:0px) and (max-width:1000px) {
+    .invoice {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width:0px) and (max-width:750px) {
+    .invoice {
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        justify-content: center;
+        align-items: stretch;
+        padding: 20px 10px;
+    }
+
+    .invoice>.info {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 15px;
+
+    }
+
+    .arrow {
+        display: none;
+    }
+}

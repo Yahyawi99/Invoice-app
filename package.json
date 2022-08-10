@@ -1,0 +1,29 @@
+{
+  "name": "my-next-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@formspree/react": "^2.2.4",
+    "animejs": "^3.2.1",
+    "dayjs": "^1.11.0",
+    "flatpickr": "^4.6.13",
+    "formik": "^2.2.9",
+    "framer-motion": "^6.2.8",
+    "next": "12.1.4",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-icons": "^4.3.1",
+    "store": "^2.0.12",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "eslint": "8.12.0",
+    "eslint-config-next": "12.1.4"
+  }
+}
