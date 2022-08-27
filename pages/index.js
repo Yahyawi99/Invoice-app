@@ -1,3 +1,4 @@
+import Head from "next/head";
 // CSS
 import homeStyles from "../styles/home.module.css";
 // useContext
@@ -11,11 +12,17 @@ const Home = () => {
   const { data } = useGlobal();
 
   return (
-    <article className={homeStyles.homeContainer}>
-      <Header />
+    <>
+      <Head>
+        <title>Invoice App</title>
+      </Head>
 
-      {data.length ? <Invoices /> : <EmptyMsg />}
-    </article>
+      <article className={homeStyles.homeContainer}>
+        <Header />
+
+        {data.length ? <Invoices /> : <EmptyMsg />}
+      </article>
+    </>
   );
 };
 
